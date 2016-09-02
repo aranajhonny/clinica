@@ -3,7 +3,7 @@
 * pacientes
 */
 class Paciente extends Conectar {
-    
+
      public function crear_paciente($nro_historia, $ced_paciente, $primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido,  $fecha_nac, $tipo_sangre, $tel_casa, $tel_movil, $direccion){
         try {
         $query = $this->dbh->prepare('INSERT INTO pacientes VALUES(?,?,?,?,?,?,?,?,?,?,?)');
@@ -22,8 +22,7 @@ class Paciente extends Conectar {
         $this->dbh = null;
         /* Alerta de notificacion de registro */
         echo utf8_decode("<script type='text/javascript'>
-        swal('Registro exitoso.');
-        window.location='?controller=clientes&action=create';
+        
         </script>");
         exit();
 

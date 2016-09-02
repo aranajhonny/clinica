@@ -16,7 +16,10 @@ class pacientesController {
             $segundo_nombre = $_POST['segundo_nombre'];
             $primer_apellido = $_POST['primer_apellido'];
             $segundo_apellido = $_POST['segundo_apellido'];
-            $fecha_nac = $_POST['fecha_nac'];
+            // invertimos la fecha para que mysql la guarde
+            $fecha_invert = $_POST['fecha_nac'];            
+            $invert = explode("/",$fecha_invert); 
+            $fecha_nac = $invert[2]."-".$invert[1]."-".$invert[0]; 
             $tipo_sangre = $_POST['tipo_sangre'];
             $tel_movil = $_POST['tel_movil'];
             $tel_casa = $_POST['tel_casa'];
