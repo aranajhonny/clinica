@@ -8,7 +8,7 @@
             <form action="?controller=pacientes&action=create" method="post">
                 <div class="form-group col-md-4 col-md-offset-2">
                     <label for="nro_historia">Numero de historia</label>
-                    <input type="text" class="form-control" name="nro_historia" id="nro_historia" disabled="true" required="required">
+                    <input type="text" class="form-control" name="nro_historia" id="nro_historia" required="required">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="ced_paciente">Cedula</label>
