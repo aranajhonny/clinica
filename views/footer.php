@@ -18,12 +18,14 @@
 
    <script src="<?php echo Conectar::ruta()?>assets/js/jquery-3.1.0.min.js"></script>
     <script src="<?php echo Conectar::ruta()?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo Conectar::ruta()?>assets/datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="<?php echo Conectar::ruta()?>assets/datepicker/js/bootstrap-datepicker.js"></script>
     <script src="<?php echo Conectar::ruta()?>assets/datepicker/js/bootstrap-datepicker.es.min.js"></script>    
      <script>
    $('#sandbox-container .input-group.date').datepicker({
            language: 'es'
     });
  </script>
+   <script src="<?php echo Conectar::ruta()?>assets/js/funciones.js"></script>
+ 
 </body>
 </html>

@@ -22,9 +22,9 @@
         <div class="masthead">
             <nav>
                 <ul class="nav nav-justified">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Registrar paciente</a></li>
-                    <li><a href="#">Citas</a></li>
+                    <li><a href="?controller=index&action=index">Home</a></li>
+                    <li><a href="?controller=index&action=archivos">Archivos</a></li>
+                    <li><a href="?controller=citas&action=index">Citas</a></li>
                     <li><a href="#">Consultas</a></li>
                     <li><a href="#">Historias</a></li>
                     <li><a href="#">Reportes</a></li>

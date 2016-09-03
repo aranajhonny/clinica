@@ -30,7 +30,19 @@ class Paciente extends Conectar {
         $e->getMessage();
         }
     }
-
+     public function buscar_paciente($cedula) {
+        try{
+            $query = $this->dbh->prepare('SELECT * FROM pacientes WHERE ced_paciente = ? ');
+            $query->bindParam(1, $cedula);
+            $query->execute();
+            $data = $query->fetch();
+            echo json_encode($data);
+            $this->dbh = null;
+        }catch (PDOException $e)
+        {
+            $e->getMessage();
+        }
+      }
 
         public function num_historia()    {
             try{

@@ -28,6 +28,17 @@ class pacientesController {
             $direccion = $_POST['direccion'];
             $paciente->crear_paciente($nro_historia, $ced_paciente, $primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido,  $fecha_nac, $tipo_sangre, $tel_casa, $tel_movil, $direccion);
     }
+
+
+    public function buscar(){
+        $cedula = $_GET["cedula"];
+        $p=new Paciente;
+        if (isset($_GET["cedula"]) and $_GET["cedula"] != "") {
+            $paciente = $p->buscar_paciente($cedula);
+        }
+    }
+
+
 }
 
 ?>
