@@ -5,6 +5,8 @@ class pacientesController {
         require_once("modelos/pacientesModel.php");        
     }
     public function index() {
+         $paciente= new Paciente;
+         $num_historia = $paciente->num_historia();
         require_once("views/registrar_paciente.php");
     }
 

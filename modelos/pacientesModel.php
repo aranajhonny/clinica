@@ -22,15 +22,27 @@ class Paciente extends Conectar {
         $this->dbh = null;
         /* Alerta de notificacion de registro */
         echo utf8_decode("<script type='text/javascript'>
-        
+        alert('Guardado.');
+         window.location='?controller=pacientes&action=index';
         </script>");
         exit();
-
         } catch (PDOException $e) {
         $e->getMessage();
         }
     }
 
+
+        public function num_historia()    {
+            try{
+                    $query = $this->dbh->prepare('SELECT MAX(nro_historia) FROM pacientes ;');
+                    $query->execute();
+                         return $query->fetch(PDO::FETCH_ASSOC);
+                      $this->dbh = null;
+             }catch (PDOException $e)
+            {
+                $e->getMessage();
+             }
+        }
 
 
 

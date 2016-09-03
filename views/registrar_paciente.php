@@ -8,7 +8,9 @@
             <form action="?controller=pacientes&action=create" method="post">
                 <div class="form-group col-md-4 col-md-offset-2">
                     <label for="nro_historia">Numero de historia</label>
-                    <input type="text" class="form-control" name="nro_historia" id="nro_historia" required="required">
+                    <?php foreach($num_historia as $key): ?>
+                    <input type="text" class="form-control" name="nro_historia" id="nro_historia" value="<?php echo $key+1 ?>" required="required">
+                    <?php endforeach; ?>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="ced_paciente">Cedula</label>
@@ -55,9 +57,10 @@
                     <label for="Direccion">Direccion</label>
                     <textarea id="direccion" name="direccion" class="form-control" rows="3" required="required"></textarea>
                 </div>
-                <center>
-                    <button type="submit" class="btn btn-default col-md-2 col-md-offset-5">Submit</button>
-                </center>
+                <div class=" col-md-3 col-md-offset-5 ">
+                    <button type="submit" class="btn btn-default glyphicon glyphicon-floppy-disk"> GUARDAR</button>
+                    <button type="reset" class="btn btn-default glyphicon glyphicon-repeat"> LIMPIAR</button>
+                </div>
             </form>
         </div>
     </div>
