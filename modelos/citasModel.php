@@ -6,7 +6,7 @@ class Cita extends Conectar {
 
   public function guardar_cita($cedula,$fecha,$hora,$status){
         try {
-        $query = $this->dbh->prepare('INSERT INTO citas VALUES(?,?,?,?)');
+        $query = $this->dbh->prepare('INSERT INTO citas VALUES(null,?,?,?,?)');
         $query->bindParam(1, $cedula);
         $query->bindParam(2, $fecha);
         $query->bindParam(3, $hora);

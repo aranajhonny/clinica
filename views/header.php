@@ -6,6 +6,9 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="<?php echo Conectar::ruta()?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Conectar::ruta()?>assets/css/justified-nav.css">
+    <link href="<?php echo Conectar::ruta()?>assets/fullcalendar/jquery-ui.min.css" rel='stylesheet'  />        
+    <link href="<?php echo Conectar::ruta()?>assets/fullcalendar/fullcalendar.min.css" rel='stylesheet'  />
+    <link href="<?php echo Conectar::ruta()?>assets/fullcalendar/fullcalendar.print.css" rel='stylesheet'  media="print"  />
     <link rel="stylesheet" href="<?php echo Conectar::ruta()?>assets/datepicker/css/bootstrap-datepicker3.min.css">    
 </head>
 <body>
@@ -25,7 +28,7 @@
                     <li><a href="?controller=index&action=index">Home</a></li>
                     <li><a href="?controller=index&action=archivos">Archivos</a></li>
                     <li><a href="?controller=citas&action=index">Citas</a></li>
-                    <li><a href="#">Consultas</a></li>
+                    <li><a href="?controller=consultas&action=index">Consultas</a></li>
                     <li><a href="#">Historias</a></li>
                     <li><a href="#">Reportes</a></li>
                     <li><a href="#">Mantenimiento</a></li>
